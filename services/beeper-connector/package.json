@@ -5,11 +5,18 @@
   "private": true,
   "scripts": {
     "extract": "python beeper_to_rdf.py",
-    "visualize": "python beeper_viz.py",
-    "extract:visualize": "python beeper_to_rdf.py --visualize"
+    "visualize": "python beeper_viz_fix.py",
+    "extract:visualize": "python beeper_to_rdf.py --visualize",
+    "sync:once": "ts-node src/index.ts"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "graphql-request": "^7.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  },
   "peerDependencies": {},
   "engines": {
     "node": ">=18.0.0"
